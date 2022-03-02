@@ -48,3 +48,17 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: target/contrast-scan-reports/contrast-scan-results.sarif.json
+
+      - name: Contrast Scan Analyze
+        uses: Contrast-Security-OSS/contrastscan-action@v1.0.0
+        with:
+          # Update with latest
+          artifact: ./target/spring-petclinic-2.5.0-SNAPSHOT.jar
+          api_url: ${{ secrets.CONTRAST__API__URL }}
+          
+        env:
+           CONTRAST__API__USER_NAME: ${{ secrets.CONTRAST__API__USER_NAME }}
+           CONTRAST__API__ORGANIZATION_ID: ${{ secrets.CONTRAST__API__ORGANIZATION_ID }}
+           CONTRAST__API__SERVICE_KEY: ${{ secrets.CONTRAST__API__SERVICE_KEY }}
+           CONTRAST__API__API_KEY: ${{ secrets.CONTRAST__API__API_KEY }}
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
