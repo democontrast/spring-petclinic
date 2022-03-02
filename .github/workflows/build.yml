@@ -57,7 +57,7 @@ jobs:
           api_url: ${{ secrets.CONTRAST__API__URL }}
           
         env:
-           CONTRAST__API__USER_NAME: "Contrast Github Demo Account"
+           CONTRAST__API__USER_NAME: ${{ secrets.CONTRAST__API__USER_NAME }}
            CONTRAST__API__ORGANIZATION_ID: ${{ secrets.CONTRAST__API__ORGANIZATION_ID }}
            CONTRAST__API__SERVICE_KEY: ${{ secrets.CONTRAST__API__SERVICE_KEY }}
            CONTRAST__API__API_KEY: ${{ secrets.CONTRAST__API__API_KEY }}
