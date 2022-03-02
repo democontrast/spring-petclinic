@@ -53,7 +53,7 @@ jobs:
         uses: Contrast-Security-OSS/contrastscan-action@v1.0.0
         with:
           # Update with latest
-          artifact: ./spring-petclinic/spring-petclinic-2.5.0-SNAPSHOT.jar
+          artifact: spring-petclinic-2.5.0-SNAPSHOT.jar
           api_url: ${{ secrets.CONTRAST__API__URL }}
           
         env:
