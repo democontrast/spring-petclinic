@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
       
-jobs:
+jobs: 
   build-and-analyze:
     name: Test and Analyze
     runs-on: ubuntu-latest
