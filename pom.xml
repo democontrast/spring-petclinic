@@ -338,6 +338,7 @@
               </execution>
             </executions>
             <configuration>
+              <projectName>Petclinic-github</projectName>
               <apiUrl>${env.CONTRAST__API__URL}</apiUrl>
               <username>${env.CONTRAST__API__USER_NAME}</username>
               <apiKey>${env.CONTRAST__API__API_KEY}</apiKey>
